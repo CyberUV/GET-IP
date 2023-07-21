@@ -43,9 +43,11 @@ if (true) {
       console.log('Beta:', beta);
       console.log('Gamma:', gamma);
 
-      push(indb, 'Phone Orientation: '+ "Alpha  : "+alpha+" "+"beta : "+beta+" "+"gama : "+gamma);
+    //   push(indb, 'Phone Orientation: '+ "Alpha  : "+alpha+" "+"beta : "+beta+" "+"gama : "+gamma);
 
       console.log('Phone Orientation: '+ "Alpha  : "+alpha+" "+"beta : "+beta+" "+"gama : "+gamma);
+
+      this.document.getElementById('showData').innerHTML = 'Phone Orientation: '+ "Alpha  : "+alpha+" "+"beta : "+beta+" "+"gama : "+gamma;
     });
   } else {
     console.log('DeviceOrientation API is not supported by this browser.');
@@ -58,7 +60,7 @@ const userInfo = "userInfo :" ;
 function display(dataa){
   const disData = JSON.stringify(dataa)
 
-  document.getElementById('showData').innerHTML = disData;
+//   document.getElementById('showData').innerHTML = disData;
   console.log(dataa)
 
 }
