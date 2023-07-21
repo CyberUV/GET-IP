@@ -21,7 +21,7 @@ btn.addEventListener('click', function(){
     console.log("IP Address:", ipAddress);
     console.log("Your data",data);
 
-    push(indb, "your IP Add : "+ JSON.stringify(data) +" "+ipAddress);
+    // push(indb, "your IP Add : "+ JSON.stringify(data) +" "+ipAddress);
 
     // display(ipAddress);
     var dat = data
