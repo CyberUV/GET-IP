@@ -32,7 +32,7 @@ btn.addEventListener('click', function(){
 
 
 // Check if the browser supports the DeviceOrientation API
-if ('DeviceOrientationEvent' in window) {
+if (true) {
     window.addEventListener('deviceorientation', function(event) {
       const alpha = event.alpha; // Z-axis rotation (in degrees)
       const beta = event.beta; // X-axis rotation (in degrees)
