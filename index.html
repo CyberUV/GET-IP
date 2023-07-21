@@ -7,54 +7,10 @@
 </head>
 <body>
     
-<button onclick="getIpAdd()"> get ip</button>
-<p id="idData"></p>
-<button onclick="getLocation()"> get ip</button>
-<p id="w3Data"></p>
+<button id="btn">Get Info</button>
+<div id="showData"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var ipadd = "12.25.45.100";
-        function getIpAdd(){
-            fetch('https://geo.ipify.org/api/v2/country?apiKey=at_ojaLMttLW7YeBMBi7LsyTsswlXDUl&ipAddress=8.8.8.8')
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data.ip);
-                console.table(data);
-                console.log("Your ip");
-                
-                document.getElementById('ipData').innerHTML = "hi hello "+ data + " " + data.ip;
-                console.log(data.ip + " " + data.location);
-                
-            })
-            .catch((error) => {
-                console.log(error);
-                console.log("Your erroe");
-            });
-        
-        };
+<script type="module" src="index.js"></script>
 
-        
-
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else { 
-                console.log("some Error");
-            }
-            }
-
-            function showPosition(position) {
-            var x = "Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;
-            console.log(x);
-            console.table(position);
-            console.log('w3school');
-            // document.write(x);
-            document.getElementById('w3Data').innerHTML = x;
-            };
-
-
-</script>
 </body>
 </html>
