@@ -6,7 +6,7 @@
     <title>Video Check</title>
 </head>
 <body>
-    <h1>Checking 4</h1>
+    <h1>Checking 5</h1>
 <button id="btn">Get Info</button>
 
     <h1>My Video</h1>
@@ -14,6 +14,12 @@
         <source src="./firefox_com_10.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    var video = document.getElementById('myVideo');
+    video.playbackRate = 4.0;
+});
+    </script>
 
 </body>
 </html>
